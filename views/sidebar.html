@@ -9,14 +9,14 @@
     <div class="user-panel">
         <div class="image-avatar image">
 
-            <img src={{user.img}} class="img-circle" alt="User Image" />
+            <img src={{user[index].img}} ng-click="addIndex()" class="img-circle" alt="User Image" />
             <span><i class="fa fa-circle text-success"></i>
             </span>
         </div>
         <div class="info">
             <p class="text-center">
                 <span>Hello,
-                    <strong>{{user.name}}</strong></span>
+                    <strong>{{user[index].name}}</strong></span>
             </p>
             <ul class="profile-list">
                 <li>

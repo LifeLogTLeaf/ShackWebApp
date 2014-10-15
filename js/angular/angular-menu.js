@@ -20,7 +20,7 @@ config(['$routeProvider',
         when('/', {
             templateUrl: 'pages/timeline.html',
             activetab: 'projects',
-            controller: HomeCtrl
+            controller: TimeLineCtrl
         }).
         when('/project/:projectId', {
             templateUrl: function(params) {
