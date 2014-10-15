@@ -22,18 +22,29 @@
             </div>
         </form>
     </div>
-
-
     <!-- /.search form -->
+
+
+
     <div class="navbar-right">
-        <ul class="nav navbar-nav">
+    <!--오른편 서브 기능 아이콘들을 숨겨놓았다 로그아웃 기능 정도 생각중 -->
+
+
+        <ul class="nav navbar-nav" style="">
+
+            <li class="form" >
+                connection
+
+            </li>
+
             <!-- Messages: style can be found in dropdown.less-->
             <li class="dropdown messages-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa   fontello-mail"></i>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <i class="fa fa-book"></i>
                     <span class="label label-success">4</span>
                 </a>
-                <ul class="dropdown-menu bg-green">
+                <!--기존 메일 버튼을 누르면 나왔던 하위 팝-->
+                <ul class="dropdown-menu bg-green" style="visibility: collapse">
                     <li class="header bg-green">
                         <span class="text-green fa fa-sort-desc"></span>You have 4 messages</li>
                     <li class="divider bg-opacity-white"></li>
@@ -115,10 +126,10 @@
             <!-- Notifications: style can be found in dropdown.less -->
             <li class="dropdown notifications-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fontello-bell"></i>
+                    <i class="fa fontello-facebook"></i>
                     <span class="label bg-aqua">10</span>
                 </a>
-                <ul class="dropdown-menu bg-aqua">
+                <ul class="dropdown-menu bg-aqua" style="visibility: collapse">
 
                     <li class="header bg-aqua">
                         <span class="text-aqua fa fa-sort-desc"></span>You have 10 notifications</li>
@@ -163,7 +174,7 @@
                 </ul>
             </li>
             <!-- Tasks: style can be found in dropdown.less -->
-            <li class="dropdown tasks-menu">
+            <li class="dropdown tasks-menu" style="visibility: collapse">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="fa  fontello-contacts"></i>
                     <span class="label label-danger">9</span>
@@ -248,7 +259,7 @@
                 </ul>
             </li>
 
-            <li class="dropdown style-menu">
+            <li class="dropdown style-menu"style="visibility: collapse">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fontello-pipette"></i>
 
@@ -278,7 +289,7 @@
                 </ul>
             </li>
 
-            <li class="">
+            <li class="" style="visibility: hidden">
                 <span class="chat-toggle dropdown-toggle" data-toggle="dropdown">
                     <i class="text-gray fa fontello-th"></i>
                 </span>

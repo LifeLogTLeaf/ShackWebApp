@@ -13,7 +13,7 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('bonanzooka', []).
+var app = angular.module('shack', []).
 config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.

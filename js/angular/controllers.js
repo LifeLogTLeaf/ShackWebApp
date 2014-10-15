@@ -14,7 +14,10 @@
 
 // optional controllers
 
-function HomeCtrl($scope, $http) {}
+function HomeCtrl($scope, $http) {
+
+
+}
 
 function ProjectCtrl($scope, $http) {}
 
@@ -71,3 +74,9 @@ function ShopDetailCtrl($scope, $http, $timeout) {}
 function ShopListCtrl($scope, $http, $timeout) {}
 
 function PetaCtrl($scope, $http, $timeout) {}
+
+function SideBarCtrl($scope) {
+    $scope.user={'name':'yoonsubKim','img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p320x320/10514709_602094559909057_545461442979457188_n.jpg?oh=2fa5ccf656478e20f37f08f8d56c78aa&oe=54F728FD&__gda__=1425365052_5d932c680b0f0e771d7a7f667aedbc16'};
+}
+
+

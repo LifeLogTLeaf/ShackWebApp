@@ -489,6 +489,18 @@
      text-align: center;
      width: 20%;
  }
+
+ /* 네비게이션 바에 양쪽 선을 긋는 기본 폼 */
+ body > .header .form {
+     border-left: 1px solid rgba(0, 0, 0, 0.1);
+     float: left;
+     font-size: 20px;
+     height: 50px;
+     line-height: 45px;
+     padding: 0 8px;
+     text-align: center;
+     width: 120px;
+ }
  .right-side > .content-header {
      /* position: relative; */
      padding: 15px 15px 10px 20px;
@@ -2779,7 +2791,7 @@ Component: timeline
      border-radius: 50%;
      color: #0AA699;
      margin: 5px 3px 0 0;
-      padding: 6px 7px !important;
+      padding: 6.5px 11px !important;
  }
  .main-theme .navbar .nav .messages-menu a:hover, .main-theme .navbar .nav .messages-menu a:focus {
      background: #0AA699!important;
@@ -2909,6 +2921,9 @@ Component: timeline
      margin: 0;
      background: #0D131E
  }
+
+
+
  .main-theme .leftmenu {
      background: #222a38;
      -webkit-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
