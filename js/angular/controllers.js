@@ -13,7 +13,89 @@
 'use strict';
 
 // optional controllers
+function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
 
+    $rootScope.$on('Facebook:statusChange', function(ev, data) {
+        console.log('"from. HeaderCtrl... " Facebook Status: ', JSON.stringify(data));
+        console.log('"headerCtrl 부터... facebook status check : '+ data.status);
+        if (data.status == 'connected') {
+
+        }
+    });
+
+    $rootScope.$on('GooglePlus:statusChange', function(ev, data) {
+        console.log('Google Status: ', data);
+        if (data.status == 'connected') {
+
+
+        } else if (data.status == 'loggin') {
+
+        }
+    });
+
+
+    /*check facebook sdk load complete*/
+//    $scope.$watch(function() {
+//            return UserService.FacebookIsReady();
+//        },
+//        function(newVal) {
+//            if (newVal)
+//                $scope.facebookReady = true;
+//        }
+//    );
+//
+//    /*check googleplus sdk load complete*/
+//    $scope.$watch(function() {
+//            return UserService.GooglePlusIsReady();
+//        },
+//        function(newVal) {
+//            if (newVal)
+//                $scope.googleplusReady = true;
+//        }
+//    );
+
+    $scope.facebooklogin = function(){
+//        1. facebook로그인을 진행한다
+
+//        UserService.Logout('FACEBOOK');
+//        Facebook.logout();
+        Facebook.login(function(response) {
+            Facebook.api('/me', function(response) {
+                console.log('페이스북 데이터 목록 \n'+JSON.stringify(response));
+            });
+        });
+
+
+
+//          1. 끝
+
+//        2.구글 로그인을 진행한다
+        //UserService.Logout('GOOGLE');
+
+//        GooglePlus.logout();
+//        GooglePlus.login().then(function (authResult) {
+//            console.log(JSON.stringify(authResult));
+//        }, function (err) {
+//            console.log(err);
+//        });
+//        2.끝
+    }
+
+
+    $scope.Logout = Logout;
+    $scope.$on('Logout', function(event) {
+        event.stopPropagation();
+
+        Logout();
+    });
+
+    function Logout () {
+        UserService.Logout($scope.user.authuser.provider);
+    }
+
+
+
+}
 function HomeCtrl($scope, $http) {
 
 
@@ -57,7 +139,9 @@ function MapCtrl($scope, $http, $timeout) {}
 
 function ErrorCtrl($scope, $http, $timeout) {}
 
-function TimeLineCtrl($scope, $http, $timeout) {
+function TimeLineCtrl($rootScope, $scope, $http, $timeout, UserService, $window) {
+
+
     $scope.type='twitter';
     $scope.check=false;
     $scope.arrPost=[{'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': '안드로이드 소켓프로그래밍을 하고있는데요!같은 apk파일인데다른폰으로는 다 송수신되는데\n제 핸드폰은 송신만되고 수신이 안되요 ㅜ\n제가 의심해볼만한 사항은 뭔가요?? ㅠㅜ'},
@@ -72,9 +156,7 @@ function TimeLineCtrl($scope, $http, $timeout) {
 
 
     $scope.loadMore = function() {
-        console.log('열추가를 시행합니다 ');
         $scope.arrPost.push({'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': '안드로이드 소켓프로그래밍을 하고있는데요!같은 apk파일인데다른폰으로는 다 송수신되는데\n제 핸드폰은 송신만되고 수신이 안되요 ㅜ\n제가 의심해볼만한 사항은 뭔가요?? ㅠㅜ'},{'type': 'facebook','name':'메롱', 'date' : '2014/6/25' , 'body':'안돼 안돼 빨리 들어가야돼'});
-        console.log($scope.arrPost);
     };
 
 }
@@ -96,6 +178,8 @@ function ShopListCtrl($scope, $http, $timeout) {}
 function PetaCtrl($scope, $http, $timeout) {}
 
 function SideBarCtrl($scope) {
+
+
     $scope.index=0;
     $scope.user=[{'name':'yoonsub Kim','img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p320x320/10514709_602094559909057_545461442979457188_n.jpg?oh=2fa5ccf656478e20f37f08f8d56c78aa&oe=54F728FD&__gda__=1425365052_5d932c680b0f0e771d7a7f667aedbc16'},
         {'name': 'youngjin chang', 'img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/t31.0-1/c62.230.769.769/s320x320/901772_424374224309284_412640333_o.jpg'},

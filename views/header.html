@@ -1,6 +1,6 @@
 <!-- TOP NAVBAR -->
 <!-- Header Navbar: style can be found in header.less -->
-<nav class="navbar navbar-static-top" role="navigation">
+<nav class="navbar navbar-static-top" role="navigation" ng-controller="HeaderCtrl">
     <!-- Sidebar toggle button-->
     <!--<a href="#" class="hidden-xs navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">-->
         <!--<span class="sr-only">Toggle navigation</span>-->
@@ -38,8 +38,8 @@
             </li>
 
             <!-- Messages: style can be found in dropdown.less-->
-            <li class="dropdown messages-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+            <li class="dropdown messages-menu" >
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" >
                     <i class="fa fa-book"></i>
                     <span class="label label-success">4</span>
                 </a>
@@ -53,7 +53,7 @@
                         <ul class="menu">
                             <li>
                                 <!-- start message -->
-                                <a href="#">
+                                <a>
                                     <div class="pull-left">
                                         <img src="http://api.randomuser.me/portraits/thumb/men/30.jpg" class="img-circle" alt="User Image" />
                                     </div>
@@ -125,10 +125,11 @@
             </li>
             <!-- Notifications: style can be found in dropdown.less -->
             <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#!" class="dropdown-toggle" data-toggle="dropdown" ng-click="facebooklogin()">
                     <i class="fa fontello-facebook"></i>
                     <span class="label bg-aqua">10</span>
                 </a>
+
                 <ul class="dropdown-menu bg-aqua" style="visibility: collapse">
 
                     <li class="header bg-aqua">
