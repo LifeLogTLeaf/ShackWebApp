@@ -1998,11 +1998,13 @@ Component: timeline
      -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
      border-radius: 2px;
+     z-index: 0;
  }
  .timeline > li {
      position: relative;
      margin-right: 10px;
      margin-bottom: 15px;
+     z-index: 10;
  }
  .timeline > li:before, .timeline > li:after {
      display: table;

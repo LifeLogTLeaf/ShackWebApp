@@ -59,11 +59,11 @@ function ErrorCtrl($scope, $http, $timeout) {}
 
 function TimeLineCtrl($scope, $http, $timeout) {
     $scope.type='twitter';
-    $scope.arrPost=[{'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': 'Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo...'},
-                    {'type': 'tweeter','name' : 'Agus Anak Baik', 'date' : '2014/6/23' , 'body':'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'},
+    $scope.arrPost=[{'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': '안드로이드 소켓프로그래밍을 하고있는데요!같은 apk파일인데다른폰으로는 다 송수신되는데\n제 핸드폰은 송신만되고 수신이 안되요 ㅜ\n제가 의심해볼만한 사항은 뭔가요?? ㅠㅜ'},
+                    {'type': 'twitter','name' : 'Agus Anak Baik', 'date' : '2014/6/23' , 'body':'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'},
         {'type': 'facebook','name' : 'Bruce Wyne', 'date' : '2014/6/25' , 'body':"'you're get a new friend!'"},
         {'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': 'Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo...'},
-        {'type': 'tweeter','name' : 'Agus Anak Baik', 'date' : '2014/6/23' , 'body':'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'},
+        {'type': 'twitter','name' : 'Agus Anak Baik', 'date' : '2014/6/23' , 'body':'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'},
         {'type': 'facebook','name' : 'Bruce Wyne', 'date' : '2014/6/25' , 'body':"'you're get a new friend!'"}
 
     ];
