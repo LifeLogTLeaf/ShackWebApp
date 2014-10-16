@@ -13,7 +13,7 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('shack', []).
+var app = angular.module('shack', ['infinite-scroll']).
 config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.

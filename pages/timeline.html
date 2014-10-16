@@ -14,8 +14,9 @@
     <div class="col-lg-12">
 
         <div class="box bg-transparent">
-            <div class="box-body no-padding">
-                <ul class="timeline" ng-repeat="post in arrPost" ng-switch="post.type">
+            <div class="box-body no-padding" infinite-scroll='loadMore()' infinite-scroll-distance='1'>
+                <!--<div ng-click="create()">tttttttttt</div>-->
+                <ul class="timeline" ng-repeat="post in arrPost"  ng-switch="post.type">
 
 
                     <!-- timeline item -->
