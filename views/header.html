@@ -174,13 +174,13 @@
                     </li>
                 </ul>
             </li>
-            <!-- Tasks: style can be found in dropdown.less -->
-            <li class="dropdown tasks-menu" style="visibility: collapse">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa  fontello-contacts"></i>
+            <!-- 로그아웃 버튼을 시행한다 -->
+            <li class="dropdown tasks-menu" style="">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-click="facebookLogout()">
+                    <i class="fa fontello-power-outline"></i>
                     <span class="label label-danger">9</span>
                 </a>
-                <ul class="dropdown-menu bg-red">
+                <ul class="dropdown-menu bg-red" style="visibility: hidden">
 
                     <li class="header bg-red">
                         <span class="text-red fa fa-sort-desc"></span>You have 9 tasks</li>

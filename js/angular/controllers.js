@@ -14,12 +14,18 @@
 
 // optional controllers
 function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
+//    console.log('HeaderCtrl 부터...'+$rootScope.loginStatus);
+
+
+
 
     $rootScope.$on('Facebook:statusChange', function(ev, data) {
-        console.log('"from. HeaderCtrl... " Facebook Status: ', JSON.stringify(data));
+        console.log('"HeaderCtrl 부터... " Facebook Status: ', JSON.stringify(data));
         console.log('"headerCtrl 부터... facebook status check : '+ data.status);
-        if (data.status == 'connected') {
-
+        $rootScope.loginStatus = data.status;
+        if($rootScope.loginStatus != 'connected'){
+            console.log('HeaderCtrl 부터...로그인이 안되어 있습니다');
+        location.replace("http://localhost/pages/login.html");
         }
     });
 
@@ -82,17 +88,16 @@ function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
     }
 
 
-    $scope.Logout = Logout;
     $scope.$on('Logout', function(event) {
         event.stopPropagation();
 
         Logout();
     });
 
-    function Logout () {
-        UserService.Logout($scope.user.authuser.provider);
-    }
+    $scope.facebookLogout = function () {
+        Facebook.logout();
 
+    }
 
 
 }
@@ -139,7 +144,7 @@ function MapCtrl($scope, $http, $timeout) {}
 
 function ErrorCtrl($scope, $http, $timeout) {}
 
-function TimeLineCtrl($rootScope, $scope, $http, $timeout, UserService, $window) {
+function TimeLineCtrl($rootScope, $scope, $http, $timeout, $window) {
 
 
     $scope.type='twitter';
