@@ -1,4 +1,6 @@
-<ol class="breadcrumb newcrumb">
+
+
+<ol class="breadcrumb newcrumb" >
     <li>
         <a href="#">
             <span><i class="fa fontello-home-outline"></i>
@@ -10,89 +12,25 @@
 </ol>
 
 <div class="row">
-    <!--   TIMELINE -->
+    <!--   타임라인 -->
     <div class="col-lg-12">
-
         <div class="box bg-transparent">
+
+            <!--무한스르롤 구현 시작 부분-->
             <div class="box-body no-padding" infinite-scroll='loadMore()' infinite-scroll-distance='0'>
-                <!--<div ng-click="create()">tttttttttt</div>-->
-                <ul class="timeline" ng-repeat="post in arrPost"  ng-switch="post.type">
+                <!--데이터를 받아온 후, arrPost에 대한 반복문을 시작한다-->
+                <ul class="timeline" ng-repeat="post in arrPost">
 
 
-                    <!-- timeline item -->
-                    <li ng-switch-when="diary">
-                        <i class="fa fa-book bg-green"></i>
-                        <span>
-                            <strong>{{post.type}}&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;{{post.name}}</i>
-                            <small>{{post.date}}</small>
-                        </span>
-                        <div class="timeline-item bg-white">
-                            <h3 style="padding: 15px 20px 0 20px;" class="timeline-header text-white  no-border">
-                                <span class="text-gray"><i class="fontello-pen"></i>&nbsp;&nbsp;My Post</span>
-                                <span class="text-white pull-right fa fa-cogs"></span>
-                            </h3>
-
-                            <div class="timeline-body">
-                                {{post.body}}
-                            </div>
-                            <div class='timeline-footer'>
-                                <a class="btn bg-green btn-xs">Read more</a>
-                                <a class="btn btn-danger btn-xs">Delete</a>
-                            </div>
-                        </div>
-                    </li>
+                    <!-- 타임라인 아이템 template_itme.js 에서 데이터 처리 후 템플릿을 뿌려준다.-->
+                    <li items post="{{$index}}"></li>
                     <!-- END timeline item -->
 
-
-                    <!-- timeline item -->
-                    <li ng-switch-when="twitter">
-                        <i class="fa fa-twitter bg-aqua"></i>
-                        <span>
-                            <strong>{{post.type}}&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;{{post.name}}</i>
-                            <small>{{post.date}}</small>
-                        </span>
-                        <div class="timeline-item bg-white">
-                            <h3 style="padding: 15px 20px 0 20px;" class="timeline-header text-white  no-border">
-                                <span class="text-gray"><i class="fa fa-twitter"></i>&nbsp;&nbsp;My Tweet</span>
-                                <span class="text-white pull-right fa fa-cogs"></span>
-                            </h3>
-
-                            <div class="timeline-body">
-                                {{post.body}}
-                            </div>
-                            <div class='timeline-footer'>
-                                <a class="btn bg-aqua btn-flat btn-xs">View comment</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END timeline item -->
-
-                    <!-- timeline item -->
-                    <li ng-switch-when="facebook">
-                        <i class="fa fa-facebook bg-blue"></i>
-                        <span>
-                            <strong>{{post.type}}&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;{{post.name}}</i>
-                            <small>{{post.date}}</small>
-                        </span>
-                        <div class="timeline-item bg-white">
-                            <h3 style="padding: 15px 20px 0 20px;" class="timeline-header text-white  no-border">
-                                <span class="text-gray"><i class="fontello-users-outline"></i>&nbsp;&nbsp;Friends List</span>
-                                <span class="text-white pull-right fa fa-cogs"></span>
-                            </h3>
-
-                            <div class="timeline-body">
-                                <img src="http://api.randomuser.me/portraits/thumb/men/45.jpg" alt="..." class="img-circle">
-                                <img src="http://api.randomuser.me/portraits/thumb/women/46.jpg" alt="..." class="margin img-circle">
-                                <img src="http://api.randomuser.me/portraits/thumb/men/47.jpg" alt="..." class="margin img-circle">
-                                <img src="http://api.randomuser.me/portraits/thumb/women/48.jpg" alt="..." class="margin img-circle">
-                            </div>
-                        </div>
-                    </li>
-                    <!-- END timeline item -->
 
 
                 </ul>
+                <!--./arrPost에 대한 반복문-->
             </div>
         </div>
     </div>
-    <!--   ./TIMELINE -->
+    <!--   ./타임라인 -->

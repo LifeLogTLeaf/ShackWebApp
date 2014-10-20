@@ -173,7 +173,6 @@ var app = angular.module('shack', ['infinite-scroll', 'facebook', 'googleplus'])
         });
     }
 ]);
-
 app.config(['$locationProvider',
     function($location) {
         $location.hashPrefix('!');

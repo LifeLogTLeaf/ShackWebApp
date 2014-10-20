@@ -18,7 +18,6 @@ function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
 
 
 
-
     $rootScope.$on('Facebook:statusChange', function(ev, data) {
         console.log('"HeaderCtrl 부터... " Facebook Status: ', JSON.stringify(data));
         console.log('"headerCtrl 부터... facebook status check : '+ data.status);
@@ -39,26 +38,6 @@ function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
         }
     });
 
-
-    /*check facebook sdk load complete*/
-//    $scope.$watch(function() {
-//            return UserService.FacebookIsReady();
-//        },
-//        function(newVal) {
-//            if (newVal)
-//                $scope.facebookReady = true;
-//        }
-//    );
-//
-//    /*check googleplus sdk load complete*/
-//    $scope.$watch(function() {
-//            return UserService.GooglePlusIsReady();
-//        },
-//        function(newVal) {
-//            if (newVal)
-//                $scope.googleplusReady = true;
-//        }
-//    );
 
     $scope.facebooklogin = function(){
 //        1. facebook로그인을 진행한다
@@ -108,7 +87,9 @@ function HomeCtrl($scope, $http) {
 
 function ProjectCtrl($scope, $http) {}
 
-function MailCtrl($scope, $http, $timeout) {}
+function MailCtrl($rootScope, $scope, $http, $timeout) {
+    console.log('mailCtrl 로부터 ...'+$rootScope.loginStatus);
+}
 
 function GeneralCtrl($scope, $http, $timeout) {}
 
@@ -150,11 +131,8 @@ function TimeLineCtrl($rootScope, $scope, $http, $timeout, $window) {
     $scope.type='twitter';
     $scope.check=false;
     $scope.arrPost=[{'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': '안드로이드 소켓프로그래밍을 하고있는데요!같은 apk파일인데다른폰으로는 다 송수신되는데\n제 핸드폰은 송신만되고 수신이 안되요 ㅜ\n제가 의심해볼만한 사항은 뭔가요?? ㅠㅜ'},
-                    {'type': 'twitter','name' : 'Agus Anak Baik', 'date' : '2014/6/23' , 'body':'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'},
-        {'type': 'facebook','name' : 'Bruce Wyne', 'date' : '2014/6/25' , 'body':"'you're get a new friend!'"},
         {'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': 'Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo...'},
-        {'type': 'twitter','name' : 'Agus Anak Baik', 'date' : '2014/6/23' , 'body':'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'},
-        {'type': 'facebook','name' : 'Bruce Wyne', 'date' : '2014/6/25' , 'body':"'you're get a new friend!'"}
+        {'type': 'facebook','name' : 'Bruce Wyne', 'date' : '2014/6/25' , 'body':'인간의 욕심은 끝이 없고 같은 실수를 반복한다.\n(Feat. 리퀴 과다)', 'imgUrl':'https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/1525587_548733518590706_3836701947769924532_n.jpg?oh=0fe243489a8d6d03ed035a341c94399e&oe=54BC7B55&__gda__=1420846696_b571cc5023b632a941d5dfef2c0c128f'}
 
     ];
 
@@ -162,6 +140,7 @@ function TimeLineCtrl($rootScope, $scope, $http, $timeout, $window) {
 
     $scope.loadMore = function() {
         $scope.arrPost.push({'type': 'diary','name' : 'Jennifer Paijo', 'date' : '2014/6/25' , 'body': '안드로이드 소켓프로그래밍을 하고있는데요!같은 apk파일인데다른폰으로는 다 송수신되는데\n제 핸드폰은 송신만되고 수신이 안되요 ㅜ\n제가 의심해볼만한 사항은 뭔가요?? ㅠㅜ'},{'type': 'facebook','name':'메롱', 'date' : '2014/6/25' , 'body':'안돼 안돼 빨리 들어가야돼'});
+        $scope.arrPost.push({'type': 'facebook','name' : 'Bruce Wyne', 'date' : '2014/6/25' , 'body':'인간의 욕심은 끝이 없고 같은 실수를 반복한다.\n(Feat. 리퀴 과다)', 'imgUrl':'https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/1525587_548733518590706_3836701947769924532_n.jpg?oh=0fe243489a8d6d03ed035a341c94399e&oe=54BC7B55&__gda__=1420846696_b571cc5023b632a941d5dfef2c0c128f'});
     };
 
 }
