@@ -19,7 +19,7 @@
             <!--무한스르롤 구현 시작 부분-->
             <div class="box-body no-padding" infinite-scroll='loadMore()' infinite-scroll-distance='0'>
                 <!--데이터를 받아온 후, arrPost에 대한 반복문을 시작한다-->
-                <ul class="timeline" ng-repeat="post in arrPost">
+                <ul class="timeline" ng-repeat="post in arrPost | orderBy:'-start':reverse">
 
 
                     <!-- 타임라인 아이템 template_itme.js 에서 데이터 처리 후 템플릿을 뿌려준다.-->

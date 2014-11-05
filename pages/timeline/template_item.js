@@ -7,14 +7,14 @@ app.directive('items', function () {
     return function (scope, iElement, iAttrs, controller) {
         var post = scope.arrPost[iAttrs.post];
 
-        console.log(post);
-
-            if (post.type == 'diary') {
+        var date = post.start;
+            //다이어리를 이쪽으로 빼야함, true형으로 바꿔야한다
+            if (post.type != 'diary') {
                 iElement.html(
                         '<i class="fa fa-book bg-green"></i>' +
                         '<span>' +
-                        '    <strong>'+post.type+'&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;'+post.name+'</i>' +
-                        '    <small>'+post.date+'</small>' +
+                        '    <strong>'+post.type+'&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;'+post.title+'</i>' +
+                        '    <small>'+date.getFullYear()+'년 '+date.getMonth()+'월 '+date.getDay()+'일 '+date.getHours()+'시'+'</small>' +
                         '</span>' +
                         '<div class="timeline-item bg-white">' +
                         '   <h3 style="padding: 15px 20px 0 20px;" class="timeline-header text-white  no-border">' +
