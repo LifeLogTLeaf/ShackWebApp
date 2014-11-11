@@ -25,9 +25,9 @@ var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.n
 
         $routeProvider.
         when('/', {
-            templateUrl: 'pages/timeline.html',
+            templateUrl: 'pages/blank.html',
             activetab: 'projects',
-            controller: TimeLineCtrl
+            controller: BlankCtrl
         }).
         when('/project/:projectId', {
             templateUrl: function(params) {

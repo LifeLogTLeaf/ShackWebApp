@@ -18,66 +18,6 @@ function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
 
 
 
-    $rootScope.$on('Facebook:statusChange', function(ev, data) {
-        console.log('"HeaderCtrl 부터... " Facebook Status: ', JSON.stringify(data));
-        console.log('"headerCtrl 부터... facebook status check : '+ data.status);
-        $rootScope.loginStatus = data.status;
-        if($rootScope.loginStatus != 'connected'){
-            console.log('HeaderCtrl 부터...로그인이 안되어 있습니다');
-        location.replace("http://localhost/pages/login.html");
-        }
-    });
-
-    $rootScope.$on('GooglePlus:statusChange', function(ev, data) {
-        console.log('Google Status: ', data);
-        if (data.status == 'connected') {
-
-
-        } else if (data.status == 'loggin') {
-
-        }
-    });
-
-
-    $scope.facebooklogin = function(){
-//        1. facebook로그인을 진행한다
-
-//        UserService.Logout('FACEBOOK');
-//        Facebook.logout();
-        Facebook.login(function(response) {
-            Facebook.api('/me', function(response) {
-                console.log('페이스북 데이터 목록 \n'+JSON.stringify(response));
-            });
-        });
-
-
-
-//          1. 끝
-
-//        2.구글 로그인을 진행한다
-        //UserService.Logout('GOOGLE');
-
-//        GooglePlus.logout();
-//        GooglePlus.login().then(function (authResult) {
-//            console.log(JSON.stringify(authResult));
-//        }, function (err) {
-//            console.log(err);
-//        });
-//        2.끝
-    }
-
-
-    $scope.$on('Logout', function(event) {
-        event.stopPropagation();
-
-        Logout();
-    });
-
-    $scope.facebookLogout = function () {
-        Facebook.logout();
-
-    }
-
 
 }
 function HomeCtrl($scope, $http) {
