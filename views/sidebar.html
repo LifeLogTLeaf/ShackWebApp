@@ -46,27 +46,47 @@
 
     <!-- SIDEBAR MENU: : style can be found in sidebar.less -->
     <ul id="menu" class="sidebar-menu">
+
         <li class="active">
-            <a href="#!/dashboard" ng-class="{activeSmall:part == 'dashboard'}">
-                <i class="fa fontello-desktop-1"></i> 
+            <a href="#!/timeline" ng-class="">
+                <i class="fa fontello-mail-1"></i>
                 <span>전체보기</span>
             </a>
         </li>
-        <li>
-            <a href="#!/dashboard" >
-                <i class="fa fontello-mail-1"></i>
-                <span>SNS</span>
-                <small class="badge pull-right bg-yellow text-white">12</small>
+        <li class="treeview">
+            <a href="#!/dashboard" ng-class="{activeSmall:part == 'dashboard'}">
+                <i class="fa fontello-desktop-1"></i> 
+                <span>서비스 디렉토리</span>
             </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="#!">
+                        <i class="fa fontello-mail-1"></i>
+                        <span>SNS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <i class="fa fontello-mail-1"></i>
+                        <span>Tiary</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <i class="fa fontello-mail-1"></i>
+                        <span>문자메시지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <i class="fa fontello-mail-1"></i>
+                        <span>위치 정보</span>
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li>
-            <a href="#!/dashboard" >
-                <i class="fa fontello-mail-1"></i> 
-                <span>일기</span>
-                <small class="badge pull-right bg-yellow text-white"></small>
-            </a>
-        </li>
-        <li>
+
+        <li class="">
             <a href="#!/morris" ng-class="">
                 <i class="fa fontello-mail-1"></i>
                 <span>통계</span>

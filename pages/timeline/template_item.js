@@ -13,7 +13,7 @@ app.directive('items', function () {
                 iElement.html(
                         '<i class="fa fa-book bg-green"></i>' +
                         '<span>' +
-                        '    <strong>'+post.type+'&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;'+post.title+'</i>' +
+                        '    <strong>'+post.title+'&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;'+post.type+'</i>' +
                         '    <small>'+date.getFullYear()+'년 '+date.getMonth()+'월 '+date.getDay()+'일 '+date.getHours()+'시'+'</small>' +
                         '</span>' +
                         '<div class="timeline-item bg-white">' +

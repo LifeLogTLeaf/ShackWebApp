@@ -14,13 +14,8 @@
 
 // angular.js main app initialization
 var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.ngStrap.modal', 'mgcrea.ngStrap.aside','infinite-scroll', 'facebook', 'googleplus']).
-    config(['$routeProvider', 'FacebookProvider', 'GooglePlusProvider',
-    function($routeProvider, FacebookProvider, GooglePlusProvider) {
-        FacebookProvider.init('675376119207653');
-        GooglePlusProvider.init({
-            clientId: '559884666614-fgk84jqqhekfgo5bhjod389pbiu7esq2.apps.googleusercontent.com',
-            apiKey: 'derp'
-        });
+    config(['$routeProvider',
+    function($routeProvider) {
 
 
         $routeProvider.
@@ -169,7 +164,7 @@ var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.n
         }).
 
         otherwise({
-            redirectTo: '/'
+            redirectTo: '/404'
         });
     }
 ]);
