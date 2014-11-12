@@ -13,16 +13,16 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.ngStrap.modal', 'mgcrea.ngStrap.aside','infinite-scroll', 'facebook', 'googleplus']).
+var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.ngStrap.modal', 'mgcrea.ngStrap.aside','infinite-scroll']).
     config(['$routeProvider',
     function($routeProvider) {
 
 
         $routeProvider.
         when('/', {
-            templateUrl: 'pages/blank.html',
-            activetab: 'projects',
-            controller: BlankCtrl
+            templateUrl: 'pages/timeline.html',
+            activetab: '',
+            controller: TimeLineCtrl
         }).
         when('/project/:projectId', {
             templateUrl: function(params) {
@@ -121,9 +121,9 @@ var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.n
             controller: TimeLineCtrl,
             activetab: 'TimeLine'
         }).
-        when('/blank', {
-            templateUrl: 'pages/blank.html',
-            controller: BlankCtrl,
+        when('/service', {
+            templateUrl: 'pages/service.html',
+            controller: ServiceCtrl,
             activetab: 'Blank'
         }).
         when('/blog-list', {
@@ -160,6 +160,12 @@ var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.n
             templateUrl: 'pages/shop-list.html',
             controller: ShopListCtrl,
             activetab: 'ShopList'
+
+        }).
+        when('/sns', {
+            templateUrl: 'pages/sns.html',
+            controller: SnsCtrl,
+            activetab: 'sns'
 
         }).
 

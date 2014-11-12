@@ -13,7 +13,7 @@
 'use strict';
 
 // optional controllers
-function HeaderCtrl($rootScope, $scope, Facebook, GooglePlus){
+function HeaderCtrl($rootScope, $scope){
 //    console.log('HeaderCtrl 부터...'+$rootScope.loginStatus);
 
 
@@ -115,8 +115,11 @@ function TimeLineCtrl($rootScope, $scope, $http, $timeout, $window) {
     }
 
 }
+function SnsCtrl() {
 
-function BlankCtrl($scope, $http, $timeout) {}
+}
+
+function ServiceCtrl($scope, $http, $timeout) {}
 
 function BlogListCtrl($scope, $http, $timeout) {}
 
@@ -135,21 +138,6 @@ function PetaCtrl($scope, $http, $timeout) {}
 function SideBarCtrl($scope) {
 
 
-    $scope.index=0;
-    $scope.user=[{'name':'yoonsub Kim','img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p320x320/10514709_602094559909057_545461442979457188_n.jpg?oh=2fa5ccf656478e20f37f08f8d56c78aa&oe=54F728FD&__gda__=1425365052_5d932c680b0f0e771d7a7f667aedbc16'},
-        {'name': 'youngjin chang', 'img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/t31.0-1/c62.230.769.769/s320x320/901772_424374224309284_412640333_o.jpg'},
-        {'name': 'seulgi choi', 'img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c0.0.320.320/p320x320/10415620_719012588170326_459503906262402156_n.jpg?oh=73beb95a3ea261085f66a3cf26ff3c2a&oe=54F3B978&__gda__=1422157115_63d0b0e00833a4250af7b906676a76e3'},
-        {'name': 'susu Choi', 'img' : 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/c74.0.320.320/p320x320/10518680_403773109769752_6922407977535480476_n.jpg?oh=c7a9e5236d5ed569828cb8003ad6af4b&oe=54ACD96F&__gda__=1422001448_4228f090ad6c046cbe760a790c83ce77'}
-
-    ];
-    $scope.addIndex = function () {
-        if($scope.index<$scope.user.length-1){
-            $scope.index +=1;
-        }else{
-            $scope.index =0;
-        }
-
-    }
 
 }
 
