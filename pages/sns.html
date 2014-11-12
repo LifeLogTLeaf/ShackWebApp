@@ -1,0 +1,139 @@
+<div class="row field-area" style=" background-color: rgb(36,36,36); ">
+    <div class="chart-title text-align-center">
+        <h1 class="text-white text-size-bigger">SNS 통계</h1>
+        <h4 class="list-title">User님의 SNS 정보 통계를 알려드립니다</h4>
+    </div>
+    <hr class="hr-head" style="width: 180px;" >
+
+    <div class="row text-align-center">
+        <div class="col-lg-4 ">
+            <h2 class="text-size-biggest text-white">
+                <i class="fontello-pencil-1"></i>
+            </h2>
+            <h3 class="text-white">
+                <b>포스팅 횟수</b>
+            </h3>
+            <h3 class="text-size-bigger" style="color: #A8D164">
+                <b>43</b>
+            </h3>
+
+            <h5>
+                <b>서비스를 이용하신 이후의 포스팅 갯수</b>
+            </h5>
+        </div>
+        <div class="col-lg-4 ">
+            <h2 class="text-size-biggest text-white">
+                <i class="fa fa-fw fa-thumbs-up"></i>
+            </h2>
+            <h3 class="text-white">
+                <b>좋아요 갯수</b>
+            </h3>
+            <h3 class="text-size-bigger" style="color: #FBCF61">
+                <b>958</b>
+            </h3>
+
+            <h5>
+                <b>전체 포스팅에서 받은 좋아요의 수</b>
+            </h5>
+        </div>
+        <div class="col-lg-4 ">
+            <h2 class="text-size-biggest text-white">
+                <i class="fa fa-fw fa-comments"></i>
+            </h2>
+            <h3 class="text-white">
+                <b>댓글 갯수</b>
+            </h3>
+            <h3 class="text-size-bigger" style="color: #4498CC">
+                <b>152</b>
+            </h3>
+
+            <h5>
+                <b>전체 포스팅에 달린 댓글의 수</b>
+            </h5>
+        </div>
+    </div>
+
+</div>
+
+<div class="row field-area" style=" background-color: #FACE6A; padding-left: 15px; padding-right: 15px;">
+    <div class="chart-title text-align-center" >
+        <h1 class="text-black text-size-bigger"><b>Chart<i class="fontello-chart-pie"></i></b></h1>
+        <h4 class="list-title text-light-gray">통계를 보기 쉬운 도표로 보여드립니다</h4>
+    </div>
+    <hr class="hr-head">
+    <div class="bg-white col-lg-offset-1 col-lg-10" >
+        <div class="box-primary">
+
+            <div class="box-body chart-responsive">
+                <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+            </div>
+            <div class="box-header text-align-center" style="margin-bottom: 25px;">
+                <h3 class="box-title">
+                    <i class="fa fa-fw fa-thumbs-up"></i><b> /</b>
+                    <i class="fa fa-fw fa-comments"></i>
+                    <b>통계</b>
+                </h3>
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    // AREA CHART
+    var area = new Morris.Area({
+        element: 'revenue-chart',
+        resize: true,
+        data: [{
+            y: '2011 Q1',
+            comment: 22,
+            good: 24
+        }, {
+            y: '2011 Q2',
+            comment: 22,
+            good: 52
+        }, {
+            y: '2011 Q3',
+            comment: 22,
+            good: 33
+        }, {
+            y: '2011 Q4',
+            comment: 22,
+            good: 12
+        }, {
+            y: '2012 Q1',
+            comment: 22,
+            good: 74
+        }, {
+            y: '2012 Q2',
+            comment: 22,
+            good: 106
+        }, {
+            y: '2012 Q3',
+            comment: 22,
+            good: 15
+        }, {
+            y: '2012 Q4',
+            comment: 22,
+            good: 32
+        }, {
+            y: '2013 Q1',
+            comment: 22,
+            good: 64
+        }, {
+            y: '2013 Q2',
+            comment: 22,
+            good: 44
+        }],
+        xkey: 'y',
+        ykeys: [ 'good','comment'],
+        labels: ['<i class="fa fa-fw fa-thumbs-up"></i>',
+            '<i class="fa fa-fw fa-comments"></i>'],
+        lineColors: ['#6A99FA','#2752AD'],
+        hideHover: 'auto'
+    });
+</script>
