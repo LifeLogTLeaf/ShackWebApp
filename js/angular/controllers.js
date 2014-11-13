@@ -115,7 +115,35 @@ function TimeLineCtrl($rootScope, $scope, $http, $timeout, $window) {
     }
 
 }
-function SnsCtrl() {
+function SnsCtrl($scope,$http) {
+    //scope변수 정의부
+    $scope.postNum = 40;
+    $scope.likeNum = 958;
+    $scope.commentNum = 152;
+    //scope변수 정의 끝
+
+    var $post = $("#postNum");
+    var $like = $("#likeNum");
+    var $comment = $("#commentNum");
+
+    increaseCount($post,$scope.postNum);
+    increaseCount($like,$scope.likeNum);
+    increaseCount($comment,$scope.commentNum);
+
+
+    //숫자 동적 카운팅을 시행
+    function increaseCount($el,max) {
+        var duration = 1000+(max/2);
+        $({ val : 0 }).animate({ val : max }, {
+            duration: duration,
+            step: function() {
+                $el.text(Math.floor(this.val));
+            },
+            complete: function() {
+                $el.text(Math.floor(this.val));
+            }
+        });
+    }
 
 }
 
