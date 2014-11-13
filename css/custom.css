@@ -130,3 +130,7 @@
     padding-bottom: 16%;
 
 }
+/*기존 style.css 내부의 파일을 수정할 때 쓰인다.*/
+.content{
+    padding-bottom: 0px;
+}
