@@ -12,22 +12,17 @@ app.directive('items', function () {
             if (post.type != 'diary') {
                 iElement.html(
                         '<i class="fa fa-book bg-green"></i>' +
-                        '<span>' +
-                        '    <strong>'+post.title+'&nbsp;&nbsp;</strong>from<i> &nbsp;&nbsp;'+post.type+'</i>' +
-                        '    <small>'+date.getFullYear()+'년 '+date.getMonth()+'월 '+date.getDay()+'일 '+date.getHours()+'시'+'</small>' +
+                        '<span class="text-white">' +
+                        '    '+date.getFullYear()+'/'+date.getMonth()+'/'+date.getDay()+' '+date.getHours()+':' +date.getMinutes()+
                         '</span>' +
-                        '<div class="timeline-item bg-white">' +
-                        '   <h3 style="padding: 15px 20px 0 20px;" class="timeline-header text-white  no-border">' +
-                        '        <span class="text-gray"><i class="fontello-pen"></i>&nbsp;&nbsp;My post</span>' +
-                        '        <span class="text-white pull-right fa fa-cogs"></span>' +
+                        '<div class="timeline-item bg-green">' +
+                        '   <h3 style="padding: 15px 20px 0 20px;" class="timeline-header text-green  no-border">' +
+                        '        <h3 class="text-white" style="margin-left: 27px;"><i class="fa fa-fw fa-pencil trans-icon"></i>'+post.title+'</h3>' +
                         '    </h3>' +
-                        '    <div class="timeline-body">' +
+                        '    <hr class="col-xs-5 col-lg-6"  style="float: left;margin: -3px 0 0 28px; ">   '+
+                        '    <h4 class="timeline-body" style="padding:10px 30px; margin-top: 18px;"><b>' +
                         '        '+post.body+'' +
-                        '    </div>' +
-                        '    <div class="timeline-footer">' +
-                        '        <a class="btn bg-green btn-xs">Read more</a>' +
-                        '        <a class="btn btn-danger btn-xs">Delete</a>' +
-                        '    </div>' +
+                        '    </b></h4>' +
                         '</div>'
                 );
 
