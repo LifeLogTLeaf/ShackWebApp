@@ -1,8 +1,3 @@
-<!-- sidebar: style can be found in sidebar.less -->
-        <script>
-
-
-        </script>
 <section class="sidebar" ng-controller="SideBarCtrl">
     <!-- Sidebar user panel -->
     <!--사용자 프로필 페이지 시작-->
@@ -41,18 +36,24 @@
     <!-- SIDEBAR MENU: : style can be found in sidebar.less -->
     <ul id="menu" class="sidebar-menu">
 
-        <li class="active">
-            <a href="#!/timeline" ng-class="">
-                <i class="fa fontello-mail-1"></i>
-                <span>대시보드</span>
-            </a>
-        </li>
+        <!--<li class="active">-->
+            <!--<a href="#!/timeline" ng-class="">-->
+                <!--<i class="fa fontello-mail-1"></i>-->
+                <!--<span>대시보드</span>-->
+            <!--</a>-->
+        <!--</li>-->
         <li class="treeview active">
             <a href="#!/service" ng-class="{activeSmall:part == 'dashboard'}">
                 <i class="fa fontello-desktop-1"></i> 
-                <span>서비스 디렉토리</span>
+                <span>서비스 대시보드</span>
             </a>
             <ul class="treeview-menu ">
+                <li>
+                    <a href="#!/timeline">
+                        <i class="fa fontello-mail-1"></i>
+                        <span>전체보기</span>
+                    </a>
+                </li>
                 <li>
                     <a href="#!/sns">
                         <i class="fa fontello-mail-1"></i>
@@ -60,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#!/service">
+                    <a href="#!/tiary">
                         <i class="fa fontello-mail-1"></i>
                         <span>Tiary</span>
                     </a>

@@ -1,4 +1,5 @@
 
+
 .col-lg-offset-1_5{
     margin-left: 12.555555%;
 }
@@ -16,6 +17,12 @@
 }
 .bg-customblue{
     background: #3E739D;
+}
+.bg-white-pink{
+    background: #FB8F81;
+}
+.bg-lovely-pink{
+    background: #F76C6C;
 }
 .textarea{
     width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;
@@ -56,7 +63,9 @@
 .text-size-bigger{
     font-size: 400%;
 }
-
+.text-lovely-pink{
+    color: #F76C6C;
+}
 .text-deep-blue{
     color: #153562;
 }
@@ -74,6 +83,9 @@
 }
 .bg-red-pink{
     background: #D76470;
+}
+.bg-black-gray{
+    background: #3D3D3D;
 }
 .text-red-pink{
     color: #CC737D;
@@ -122,7 +134,7 @@
 }
 
 .field-area{
-    margin-top: -6.5%;
+    margin-top: -5.5%;
     margin-left: -2%;
     margin-right: -2%;
     margin-bottom: -2%;

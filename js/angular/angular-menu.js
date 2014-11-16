@@ -151,10 +151,10 @@ var app = angular.module('shack', ['ngRoute','ngAnimate', 'ngSanitize','mgcrea.n
             controller: ShopDetailCtrl,
             activetab: 'ShopDetail'
         }).
-        when('/peta', {
-            templateUrl: 'pages/peta.html',
-            controller: PetaCtrl,
-            activetab: 'Peta'
+        when('/tiary', {
+            templateUrl: 'pages/tiary.html',
+            controller: TimeLineCtrl,
+            activetab: ''
         }).
         when('/shop-list', {
             templateUrl: 'pages/shop-list.html',

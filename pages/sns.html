@@ -1,125 +1,182 @@
-<div class="row field-area" style=" background-color: rgb(36,36,36); ">
-    <div class="chart-title text-align-center">
-        <h1 class="text-white text-size-bigger" style="margin-left: 46px;">SNS 정보<i class="fontello-info"></i></h1>
-        <h4 class="list-title">User님의 SNS 정보를 알려드립니다</h4>
+
+
+<div class="row field-area" style="background: #343434; margin-bottom: 0%; padding-top: 1%">
+    <div class="text-align-center">
+        <h1 class="text-white text-size-bigger" style="margin-left: 46px;">SNS<i class="fontello-tree-1"></i></h1>
+        <h4 class="list-title">당신의 모든 네트워킹 정보</h4>
     </div>
     <hr class="hr-head"  >
+    <div class="row"style="margin: 30px 0;"></div>
+    <!--   대시보드 body시작 -->
+    <div class="col-lg-12">
+        <div class="row col-lg-offset-1 col-lg-5">
+            <div class="" style=" background:#3D3D3D; ">
+                <div class="chart-title text-align-center">
+                    <h1 class="text-white text-size-bigger" style="margin-left: 46px;">SNS 정보<i class="fontello-info"></i></h1>
+                    <h4 class="list-title">User님의 SNS 정보를 알려드립니다</h4>
+                </div>
+                <hr class="hr-head"  >
 
-    <div class="row text-align-center">
-        <div class="col-lg-4 ">
-            <h2 class="text-size-biggest text-white">
-                <i class="fa fa-fw fa-pencil trans-icon"></i>
-            </h2>
-            <h3 class="text-white">
-                <b>포스팅 횟수</b>
-            </h3>
-            <h3 class="text-size-bigger" style="color: #A8D164">
-                <b id="postNum" ng-model="postNum"></b>
-            </h3>
+                <div class="row text-align-center" style="margin: 0 10px;">
+                    <div class="col-lg-4 ">
+                        <h2 class="text-size-biggest text-white">
+                            <i class="fa fa-fw fa-pencil trans-icon"></i>
+                        </h2>
+                        <h3 class="text-white">
+                            <b>포스팅 횟수</b>
+                        </h3>
+                        <h3 class="text-size-bigger" style="color: #A8D164">
+                            <b id="postNum" ng-model="postNum"></b>
+                        </h3>
 
-            <h5>
-                <b>서비스를 이용하신 이후의 포스팅 갯수</b>
-            </h5>
+                        <h5>
+                            <b>서비스를 이용하신 이후의 포스팅 갯수</b>
+                        </h5>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <h2 class="text-size-biggest text-white">
+                            <i class="fa fa-fw fa-thumbs-up trans-icon"></i>
+                        </h2>
+                        <h3 class="text-white">
+                            <b>좋아요 갯수</b>
+                        </h3>
+                        <h3 class="text-size-bigger" style="color: #FBCF61">
+                            <b id="likeNum" ng-model="likeNum"></b>
+                        </h3>
+
+                        <h5>
+                            <b>전체 포스팅에서 받은 좋아요의 수</b>
+                        </h5>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <h2 class="text-size-biggest text-white">
+                            <i class="fa fa-fw fa-comments trans-icon"></i>
+                        </h2>
+                        <h3 class="text-white">
+                            <b>댓글 갯수</b>
+                        </h3>
+                        <h3 class="text-size-bigger" style="color: #4498CC">
+                            <b id="commentNum" ng-model="commentNum">152</b>
+                        </h3>
+
+                        <h5>
+                            <b>전체 포스팅에 달린 댓글의 수</b>
+                        </h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row " style="background: #ff6f6f; margin: 0 0 20px; height: 11px"></div>
+
+
+            <div class="row bg-black-gray" style=" padding-left: 15px; padding-right: 15px; margin: 0;">
+                <div class="chart-title text-align-center" >
+                    <h1 class="text-black text-size-bigger" style="margin-left: 46px"><b>Chart<i class="fontello-chart-pie"></i></b></h1>
+                    <h4 class="list-title text-light-gray">통계를 쉬운 도표로 보여드립니다</h4>
+                </div>
+                <hr class="hr-head">
+                <div class="bg-white col-lg-offset-1 col-lg-10" >
+                    <div class="box-primary">
+
+                        <div class="box-body chart-responsive">
+                            <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+                        </div>
+                        <div class="box-header text-align-center" style="margin-bottom: 25px;">
+                            <h3 class="box-title">
+                                <i class="fa fa-fw fa-thumbs-up"></i><b> /</b>
+                                <i class="fa fa-fw fa-comments"></i>
+                                <b>통계</b>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row " style="background: #ff6f6f; margin: 0; height: 11px"></div>
+
+
+            <div class="bg-black-gray" style="  padding-left: 15px; padding-right: 15px; margin-bottom: 0;">
+                <div class="chart-title text-align-center" >
+                    <h1 class="text-black text-size-bigger" style="margin-left: 46px; color: #343434;"><b>Best<i class="fa fa-fw fa-heart"></i></b></h1>
+                    <h4 class="list-title text-white">최다 <i class="fa fa-fw fa-thumbs-up"></i>를 받은 게시글을 소개합니다</h4>
+                </div>
+                <hr class="hr-head">
+
+                <div class="row" style="margin:0 3%;">
+                    <div class="col-lg-5" style="background: #413C3A; top: 40px; width: 45%">
+                        <div class="row box-header bg-lovely-pink text-white" >
+                            <h3><i class="fontello-doc-text"></i> 게시글</h3>
+                            <hr class="col-lg-6" style="padding: 0; margin: 0 0 10px;">
+
+                        </div>
+                        <div class="box-body text-white" >
+                            <h4><span class="fa fa-fw fa-clock-o text-green"></span> 2014년 07월 03일</h4>
+                            &nbsp;
+                            <h4>얼마 전 대한민국호국미술대전에 입선 한 사진입니다</p>
+                                <p>민간과 함께하는 군이라는 주제를 담은 사진입니다</p>
+                                <p>다리가 짤린 작품이 입선 되었는데</p>
+                                <p>기대도 안 했지만 되더라도 전신이 다 나온 작품이 될 줄 알았는데...</p>
+                                허허...</h4>
+                        </div>
+                        <div class="box-footer" style="padding-left: 20px">
+                            <h3>
+                                <i class="fa fa-fw fa-thumbs-up"></i>24
+                                <i class="fa fa-fw fa-comments"></i>12
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class=" col-lg-5" style="background: #413C3A; top: 40px;width: 45%;">
+                        <div class="row box-header bg-lovely-pink text-white">
+                            <h3><i class="fontello-photo"></i> 사진</h3>
+                            <hr class="col-lg-5" style="padding: 0; margin: 0 0 10px;">
+                        </div>
+                        <div class="box-body text-white" >
+                            <h4><span class="fa fa-fw fa-clock-o text-green"></span> 2014년 11월 11일</h4>
+                            &nbsp;
+
+                            <h4><img src="https://scontent-b.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10635696_10152489495485994_5543849827313503054_n.jpg?oh=32c32fbdf334df83b9732d501b5f5af5&oe=54EC8409"></h4>
+                        </div>
+                        <div class="box-footer" style="padding-left: 20px">
+                            <h3>
+                                <i class="fa fa-fw fa-thumbs-up"></i>24
+                                <i class="fa fa-fw fa-comments"></i>12
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row " style="background: #ff6f6f; margin: 0; height: 11px"></div>
+
+
         </div>
-        <div class="col-lg-4 ">
-            <h2 class="text-size-biggest text-white">
-                <i class="fa fa-fw fa-thumbs-up trans-icon"></i>
-            </h2>
-            <h3 class="text-white">
-                <b>좋아요 갯수</b>
-            </h3>
-            <h3 class="text-size-bigger" style="color: #FBCF61">
-                <b id="likeNum" ng-model="likeNum"></b>
-            </h3>
 
-            <h5>
-                <b>전체 포스팅에서 받은 좋아요의 수</b>
-            </h5>
-        </div>
-        <div class="col-lg-4 ">
-            <h2 class="text-size-biggest text-white">
-                <i class="fa fa-fw fa-comments trans-icon"></i>
-            </h2>
-            <h3 class="text-white">
-                <b>댓글 갯수</b>
-            </h3>
-            <h3 class="text-size-bigger" style="color: #4498CC">
-                <b id="commentNum" ng-model="commentNum">152</b>
-            </h3>
+        <!--타임라인 페이지 시작-->
+        <div class="box bg-transparent">
 
-            <h5>
-                <b>전체 포스팅에 달린 댓글의 수</b>
-            </h5>
+            <!--무한스르롤 구현 시작 부분-->
+            <div class="box-body no-padding col-lg-offset-1 col-lg-5" infinite-scroll='loadMore()' infinite-scroll-distance='0'>
+                <!--데이터를 받아온 후, arrPost에 대한 반복문을 시작한다-->
+                <ul class="timeline" ng-repeat="post in arrPost | orderBy:'-start':reverse">
+
+
+                    <!-- 타임라인 아이템 template_itme.js 에서 데이터 처리 후 템플릿을 뿌려준다.-->
+                    <li items post="{{$index}}"></li>
+                    <!-- END timeline item -->
+
+
+
+                </ul>
+                <!--./arrPost에 대한 반복문-->
+            </div>
+
         </div>
+        <!--./타임라인 끝-->
+
     </div>
-
+    <!--   ./대시보드 body -->
 </div>
-
-<div class="row field-area" style=" background-color: #FACE6A; padding-left: 15px; padding-right: 15px;">
-    <div class="chart-title text-align-center" >
-        <h1 class="text-black text-size-bigger" style="margin-left: 46px"><b>Chart<i class="fontello-chart-pie"></i></b></h1>
-        <h4 class="list-title text-light-gray">통계를 쉬운 도표로 보여드립니다</h4>
-    </div>
-    <hr class="hr-head">
-    <div class="bg-white col-lg-offset-1 col-lg-10" >
-        <div class="box-primary">
-
-            <div class="box-body chart-responsive">
-                <div class="chart" id="revenue-chart" style="height: 300px;"></div>
-            </div>
-            <div class="box-header text-align-center" style="margin-bottom: 25px;">
-                <h3 class="box-title">
-                    <i class="fa fa-fw fa-thumbs-up"></i><b> /</b>
-                    <i class="fa fa-fw fa-comments"></i>
-                    <b>통계</b>
-                </h3>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div class="field-area" style=" background-color: #F76C6C; padding-left: 15px; padding-right: 15px; margin-bottom: 0;">
-    <div class="chart-title text-align-center" >
-        <h1 class="text-black text-size-bigger" style="margin-left: 46px; color: #343434;"><b>Best<i class="fa fa-fw fa-heart"></i></b></h1>
-        <h4 class="list-title text-white">최다 <i class="fa fa-fw fa-thumbs-up"></i>를 받은 게시글을 소개합니다</h4>
-    </div>
-    <hr class="hr-head">
-    <div class="row" style="margin:0 5%;">
-        <div class="col-lg-5" style="background: #413C3A; top: 40px;  float: left;">
-            <div class="box-body text-white" >
-                <h4><span class="fa fa-fw fa-clock-o text-green"></span> 2014년 07월 03일</h4>
-                <h4>얼마 전 대한민국호국미술대전에 입선 한 사진입니다</p>
-                    <p>민간과 함께하는 군이라는 주제를 담은 사진입니다</p>
-                    <p>다리가 짤린 작품이 입선 되었는데</p>
-                    <p>기대도 안 했지만 되더라도 전신이 다 나온 작품이 될 줄 알았는데...</p>
-                    허허...</h4>
-            </div>
-            <div class="box-footer" style="padding-left: 20px">
-                <h3>
-                <i class="fa fa-fw fa-thumbs-up"></i>24
-                <i class="fa fa-fw fa-comments"></i>12
-                </h3>
-            </div>
-        </div>
-        <div class=" col-lg-5" style="background: #413C3A; top: 40px; float: right">
-            <div class="box-body text-white" >
-                <h4><span class="fa fa-fw fa-clock-o text-green"></span> 2014년 11월 11일</h4>
-                <h4><img src="https://scontent-b.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10635696_10152489495485994_5543849827313503054_n.jpg?oh=32c32fbdf334df83b9732d501b5f5af5&oe=54EC8409">
-            </div>
-            <div class="box-footer" style="padding-left: 20px">
-                <h3>
-                    <i class="fa fa-fw fa-thumbs-up"></i>24
-                    <i class="fa fa-fw fa-comments"></i>12
-                </h3>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
 
 <script>
     // AREA CHART
